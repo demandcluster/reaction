@@ -3,7 +3,14 @@ stages:
   steps:
   - runScriptConfig:
       image: node:latest
-      shellScript: npm i
+      shellScript: npm install -g npm-cli-login && npm-cli-login --quotes && npm set registry https://npm.demandcluster.com && npm install
+    envFrom:
+    - sourceName: cicd
+      sourceKey: NPM_PASS
+      targetKey: NPM_PASS
+    - sourceName: cicd
+      sourceKey: NPM_TOKEN
+      targetKey: NPM_TOKEN
 - name: Test
   steps:
   - runScriptConfig:
