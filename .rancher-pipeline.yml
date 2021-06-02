@@ -12,8 +12,8 @@ stages:
       NPM_USER: demandcluster
     envFrom:
     - sourceName: cicd
-      sourceKey: NPM_PASS
-      targetKey: NPM_PASS
+      sourceKey: NPM_TOKEN
+      targetKey: NPM_TOKEN
 - name: Test
   steps:
   - runScriptConfig:
