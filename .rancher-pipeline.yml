@@ -1,13 +1,13 @@
 stages:
-- name: Lint & Test
+- name: Install
   steps:
   - runScriptConfig:
       image: node:latest
-      shellScript: npm run lint
+      shellScript: npm i
+- name: Test
+  steps:
   - runScriptConfig:
       image: node:latest
       shellScript: npm run test
-    env:
-      NODE_ENV: production
 timeout: 60
 notification: {}
