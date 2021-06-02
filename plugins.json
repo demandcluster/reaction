@@ -15,7 +15,7 @@
   "authentication": "@reactioncommerce/api-plugin-authentication",
   "authorization": "@reactioncommerce/api-plugin-authorization-simple",
   "products": "@reactioncommerce/api-plugin-products",
-  "catalogs": "/public/custom/api-plugin-catalogs/index.js",
+  "catalogs": "@reactioncommerce/api-plugin-catalogs",
   "tags": "@reactioncommerce/api-plugin-tags",
   "pricingSimple": "@reactioncommerce/api-plugin-pricing-simple",
   "inventory": "@reactioncommerce/api-plugin-inventory",
@@ -25,6 +25,7 @@
   "payments": "@reactioncommerce/api-plugin-payments",
   "paymentsStripe": "@reactioncommerce/api-plugin-payments-stripe",
   "paymentsExample": "@reactioncommerce/api-plugin-payments-example",
+  "paymentsBuckaroo": "@demandcluster/api-plugin-payments-buckaroo",
   "discounts": "@reactioncommerce/api-plugin-discounts",
   "discountCodes": "@reactioncommerce/api-plugin-discounts-codes",
   "surcharges": "@reactioncommerce/api-plugin-surcharges",
@@ -37,5 +38,6 @@
   "notifications": "@reactioncommerce/api-plugin-notifications",
   "addressValidationTest": "@reactioncommerce/api-plugin-address-validation-test",
   "demandcluster": "@demandcluster/reaction-channel-manager",
-  "search": "/public/custom/api-plugin-search/index.js"
+  "search": "/public/custom/api-plugin-search/index.js",
+  "channelengine": "@demandcluster/api-plugin-channelengine"
 }

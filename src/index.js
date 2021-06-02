@@ -8,14 +8,12 @@ const api = new ReactionAPICore({
 });
 
 /**
- * @summary Registers Reaction API plugins and then starts the app
+ * @summary Registers Reaction API plugins and then starts the apps
  * @return {Promise<undefined>} undefined
  */
 async function runApp() {
   const plugins = await importPluginsJSONFile("../plugins.json");
-
   await api.registerPlugins(plugins);
-
   await api.start();
 }
 
