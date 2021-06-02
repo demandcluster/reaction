@@ -1,0 +1,11 @@
+stages:
+- name: Lint & Test
+  steps:
+  - runScriptConfig:
+      image: node:latest
+      shellScript: npm run lint
+  - runScriptConfig:
+      image: node:latest
+      shellScript: npm run test
+timeout: 60
+notification: {}
