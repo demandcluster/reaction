@@ -7,5 +7,7 @@ stages:
   - runScriptConfig:
       image: node:latest
       shellScript: npm run test
+    env:
+      NODE_ENV: production
 timeout: 60
 notification: {}
