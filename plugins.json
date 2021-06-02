@@ -38,6 +38,5 @@
   "notifications": "@reactioncommerce/api-plugin-notifications",
   "addressValidationTest": "@reactioncommerce/api-plugin-address-validation-test",
   "demandcluster": "@demandcluster/reaction-channel-manager",
-  "search": "/public/custom/api-plugin-search/index.js",
   "channelengine": "@demandcluster/api-plugin-channelengine"
 }
