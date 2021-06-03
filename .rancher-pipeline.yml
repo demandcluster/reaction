@@ -1,11 +1,16 @@
 stages:
-- name: Install
+- name: Install libvips
   steps:
   - runScriptConfig:
       image: node:latest
       shellScript: |-
         apt-get update
         apt-get install libvips42
+- name: Install MOC API
+  steps:
+  - runScriptConfig:
+      image: node:latest
+      shellScript: 
         npm set registry https://npm.demandcluster.com
         npm install
     env:
