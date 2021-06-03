@@ -5,7 +5,7 @@ stages:
       image: node:lts
       shellScript: |-
         apt-get update
-        apt-get install libvip-dev
+        apt-get install libvips-dev
         npm i -g npm:latest
         npm i
     env:
