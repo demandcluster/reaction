@@ -34,7 +34,7 @@ ENV NPM_TOKEN=${NPM_TOKEN}
 RUN npm set registry https://npm.demandcluster.com
 RUN echo ${NPM_TOKEN}
 # Install dependencies
-RUN npm ci --only=prod
+RUN npm rb --only=prod
 # delete npm token
 RUN rm -f .npmrc || :
 
