@@ -5,14 +5,12 @@ stages:
       image: node:latest
       shellScript: |-
         apt-get update
-        apt-get install libvips42
+        apt-get install libvips42 -y
 - name: Install MOC API
   steps:
   - runScriptConfig:
       image: node:latest
-      shellScript: 
-        npm set registry https://npm.demandcluster.com
-        npm install
+      shellScript: npm set registry https://npm.demandcluster.com npm install
     env:
       HOME: /home/jenkins
       NPM_CONFIG_CACHE: /home/jenkins/.npm
