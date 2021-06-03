@@ -24,17 +24,17 @@ RUN npm i -g npm@latest
 # effectively making it optional to have a LICENSE file.
 # But the others are on their own line so that the build
 # will fail if they are not present in the project.
-ONBUILD ARG NPM_TOKEN
-ONBUILD COPY --chown=node:node package.json ./
-ONBUILD COPY --chown=node:node package-lock.json .npmrc* LICENSE* ./
-ONBUILD COPY --chown=node:node ./src ./src
+ARG NPM_TOKEN
+COPY --chown=node:node package.json ./
+COPY --chown=node:node package-lock.json .npmrc* LICENSE* ./
+COPY --chown=node:node ./src ./src
 
 USER node
 
 # Install dependencies
-ONBUILD RUN npm ci --only=prod
+RUN npm ci --only=prod
 # delete npm token
-ONBUILD RUN rm -f .npmrc || :
+RUN rm -f .npmrc || :
 
 # The base image copies /src but we need to copy additional folders in this project
 COPY --chown=node:node ./public ./public
