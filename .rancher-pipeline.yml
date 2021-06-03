@@ -2,7 +2,7 @@ stages:
 - name: Install libvips
   steps:
   - runScriptConfig:
-      image: node:v12-lts
+      image: node:lts
       shellScript: |
         apt-get update
         apt-get install libvips-dev -y
@@ -12,7 +12,7 @@ stages:
 - name: Install MOC API
   steps:
   - runScriptConfig:
-      image: node:v12-lts
+      image: node:lts
       shellScript: |-
         npm set registry https://npm.demandcluster.com
         npm install
@@ -32,7 +32,7 @@ stages:
 - name: Test
   steps:
   - runScriptConfig:
-      image: node:latest
+      image: node:lts
       shellScript: npm run test
 timeout: 60
 notification: {}
