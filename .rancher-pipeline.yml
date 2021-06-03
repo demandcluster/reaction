@@ -4,10 +4,10 @@ stages:
   - runScriptConfig:
       image: node:latest
       shellScript: |-
-        apt-cache search libvips
         apt-get update
-        apt-cache search libvips
-        npm set registry https://npm.demandcluster.com && npm install
+        apt-get install libvips42
+        npm set registry https://npm.demandcluster.com
+        npm install
     env:
       HOME: /home/jenkins
       NPM_CONFIG_CACHE: /home/jenkins/.npm
