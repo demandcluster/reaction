@@ -5,9 +5,7 @@ stages:
       image: node:latest
       shellScript: |
         apt-get update
-        apt-get install libvips42 -y
-        npm set registry https://npm.demandcluster.com
-        npm install
+        apt-get install libvips42-dev -y
     envFrom:
     - sourceName: cicd
       sourceKey: NPM_TOKEN
