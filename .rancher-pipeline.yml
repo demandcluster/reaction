@@ -45,8 +45,8 @@ stages:
       tag: demandcluster/core:staging
       pushRemote: true
       registry: harbor.demandcluster.com
-  envFrom:
-  - sourceName: cicd
-    sourceKey: NPM_TOKEN
+    envFrom: 
+    - sourceName: cicd
+      sourceKey: NPM_TOKEN
 timeout: 60
 notification: {}
