@@ -27,7 +27,6 @@ stages:
       HOME: /home/jenkins
       NPM_CONFIG_CACHE: /home/jenkins/.npm
       NPM_USER: demandcluster
-      NPM_TOKEN: "p437OueZtPid1pKH+LwtHMAWi8P+XszCTAOzIS/yZ1qp8G/hdDgrb9+2DPi1jHW3x8TEpdaFX1dKhaHw3dBrKQ=="
     envFrom:
     - sourceName: cicd
       sourceKey: NPM_TOKEN
