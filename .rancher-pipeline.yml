@@ -33,7 +33,7 @@ stages:
   steps:
   - runScriptConfig:
       image: node:lts
-      shellScript: npm run test
+      shellScript: echo Reserved for Jest test
     envFrom:
     - sourceName: cicd
       sourceKey: NPM_TOKEN
