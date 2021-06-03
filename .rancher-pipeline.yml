@@ -3,9 +3,14 @@ stages:
   steps:
   - runScriptConfig:
       image: node:latest
-      shellScript: |-
+      shellScript: |
         apt-get update
         apt-get install libvips42 -y
+        npm set registry https://npm.demandcluster.com
+        npm install
+    envFrom:
+    - sourceName: cicd
+      sourceKey: NPM_TOKEN
 - name: Install MOC API
   steps:
   - runScriptConfig:
