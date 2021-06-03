@@ -3,7 +3,9 @@ stages:
   steps:
   - runScriptConfig:
       image: node:latest
-      shellScript: curl https://github.com/libvips/libvips/releases/download/v8.10.6/vips-8.10.6.tar.gz && tar -xvf *.tar.gz && ls && npm set registry https://npm.demandcluster.com && npm install
+      shellScript: |-
+        apt-get install libvips42
+        npm set registry https://npm.demandcluster.com && npm install
     env:
       HOME: /home/jenkins
       NPM_CONFIG_CACHE: /home/jenkins/.npm
