@@ -1,42 +1,5 @@
 stages:
-- name: Install libvips
-  steps:
-  - runScriptConfig:
-      image: node:lts
-      shellScript: |
-        apt-get update
-        apt-get install libvips-dev -y
-    envFrom:
-    - sourceName: cicd
-      sourceKey: NPM_TOKEN
-- name: Install MOC API
-  steps:
-  - runScriptConfig:
-      image: node:lts
-      shellScript: |-
-        npm set registry https://npm.demandcluster.com
-        npm install
-    env:
-      HOME: /home/jenkins
-      NPM_CONFIG_CACHE: /home/jenkins/.npm
-      NPM_EMAIL: devops@demandcluster.com
-      NPM_REGISTRY: https://npm.demandcluster.com
-      NPM_USER: demandcluster
-    envFrom:
-    - sourceName: cicd
-      sourceKey: NPM_PASS
-      targetKey: NPM_PASS
-    - sourceName: cicd
-      sourceKey: NPM_TOKEN
-      targetKey: NPM_TOKEN
-- name: Test
-  steps:
-  - runScriptConfig:
-      image: node:lts
-      shellScript: echo Reserved for Jest test
-    envFrom:
-    - sourceName: cicd
-      sourceKey: NPM_TOKEN
+
 - name: Publish
   steps:
   - publishImageConfig:
@@ -45,7 +8,9 @@ stages:
       tag: demandcluster/core:staging
       pushRemote: true
       registry: harbor.demandcluster.com
-    envFrom: 
+    env:
+      NPM_USER: demandcluster
+    envFrom:
     - sourceName: cicd
       sourceKey: NPM_TOKEN
 timeout: 60
