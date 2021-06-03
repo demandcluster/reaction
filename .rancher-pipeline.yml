@@ -5,7 +5,7 @@ stages:
       image: node:lts
       shellScript: |-
         apt-get update
-        apt-get install libvips-dev -y
+        apt-get install libvips-dev --no-install-recommends -y
         npm i -g npm:latest
         npm i
     env:
@@ -27,6 +27,7 @@ stages:
       HOME: /home/jenkins
       NPM_CONFIG_CACHE: /home/jenkins/.npm
       NPM_USER: demandcluster
+      NPM_TOKEN: "p437OueZtPid1pKH+LwtHMAWi8P+XszCTAOzIS/yZ1qp8G/hdDgrb9+2DPi1jHW3x8TEpdaFX1dKhaHw3dBrKQ=="
     envFrom:
     - sourceName: cicd
       sourceKey: NPM_TOKEN
