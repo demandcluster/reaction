@@ -1,5 +1,6 @@
 # Dockerfile for production builds
 FROM reactioncommerce/node-prod:14.15.0-v1
+RUN npm set registry https://registry.npmjs.org
 
 ENV PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/lib/node_modules/npm/bin/node-gyp-bin:/usr/local/src/app/node_modules/.bin
 
@@ -7,7 +8,6 @@ ENV PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local
 # This prevents the `sharp` lib from working because it installs the binaries
 # in a post-install script. We copy their install script here and run it.
 # hadolint ignore=DL3003,SC2015
-RUN npm set registry https://npm.demandcluster.com
 
 # Copy npm config
 ARG NPM_TOKEN  
