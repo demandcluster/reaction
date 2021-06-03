@@ -1,0 +1,23 @@
+stages:
+- name: Install
+  steps:
+  - runScriptConfig:
+      image: node:latest
+      shellScript: npm set registry https://npm.demandcluster.com && npm install
+    env:
+      HOME: /home/jenkins
+      NPM_CONFIG_CACHE: /home/jenkins/.npm
+      NPM_EMAIL: devops@demandcluster.com
+      NPM_REGISTRY: https://npm.demandcluster.com
+      NPM_USER: demandcluster
+    envFrom:
+    - sourceName: cicd
+      sourceKey: NPM_TOKEN
+      targetKey: NPM_TOKEN
+- name: Test
+  steps:
+  - runScriptConfig:
+      image: node:latest
+      shellScript: npm run test
+timeout: 60
+notification: {}
