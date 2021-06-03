@@ -10,8 +10,8 @@ ENV PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local
 RUN npm set registry https://npm.demandcluster.com
 
 # Copy npm config
-COPY ./.npmrc ./public/.npmrc
-COPY ./.npmrc /root/.npmrc
+ARG NPM_TOKEN  
+COPY .npmrc .npmrc 
 
 RUN cd node_modules/sharp && (node install/libvips && node install/dll-copy && prebuild-install) || (node-gyp rebuild && node install/dll-copy)
 
