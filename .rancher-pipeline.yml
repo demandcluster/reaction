@@ -4,7 +4,7 @@ stages:
   - runScriptConfig:
       image: node:latest
       shellScript: |-
-        apt-get install libvips42
+        apt-get install libvips
         npm set registry https://npm.demandcluster.com && npm install
     env:
       HOME: /home/jenkins
