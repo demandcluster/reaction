@@ -4,13 +4,14 @@ stages:
   - runScriptConfig:
       image: node:lts
       shellScript: |-
+        apt-get update
         apt-get install libvip-dev
         npm i -g npm:latest
         npm i
     env:
-      NPM_USER: demandcluster
       HOME: /home/jenkins
       NPM_CONFIG_CACHE: /home/jenkins/.npm
+      NPM_USER: demandcluster
     envFrom:
     - sourceName: cicd
       sourceKey: NPM_TOKEN
@@ -23,9 +24,9 @@ stages:
       pushRemote: true
       registry: harbor.demandcluster.com
     env:
-      NPM_USER: demandcluster
       HOME: /home/jenkins
       NPM_CONFIG_CACHE: /home/jenkins/.npm
+      NPM_USER: demandcluster
     envFrom:
     - sourceName: cicd
       sourceKey: NPM_TOKEN
