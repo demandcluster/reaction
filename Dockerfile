@@ -24,13 +24,15 @@ RUN npm i -g npm@latest
 # effectively making it optional to have a LICENSE file.
 # But the others are on their own line so that the build
 # will fail if they are not present in the project.
-ENV NPM_TOKEN=${NPM_TOKEN}
-COPY --chown=node:node package.json ./
-COPY --chown=node:node package-lock.json .npmrc* LICENSE* ./
+
+COPY --chown=node:node package.json .npmrc* ./
+COPY --chown=node:node package-lock.json LICENSE* ./
 COPY --chown=node:node ./src ./src
 
 USER node
+ENV NPM_TOKEN=${NPM_TOKEN}
 RUN npm set registry https://npm.demandcluster.com
+RUN echo ${NPM_TOKEN}
 # Install dependencies
 RUN npm ci --only=prod
 # delete npm token
