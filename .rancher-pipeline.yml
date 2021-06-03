@@ -1,5 +1,19 @@
 stages:
-
+- name: Install
+  steps:
+  - runScriptConfig:
+      image: node:lts
+      shellScript: |-
+        apt-get install libvip-dev
+        npm i -g npm:latest
+        npm i
+    env:
+      NPM_USER: demandcluster
+      HOME: /home/jenkins
+      NPM_CONFIG_CACHE: /home/jenkins/.npm
+    envFrom:
+    - sourceName: cicd
+      sourceKey: NPM_TOKEN
 - name: Publish
   steps:
   - publishImageConfig:
@@ -10,6 +24,8 @@ stages:
       registry: harbor.demandcluster.com
     env:
       NPM_USER: demandcluster
+      HOME: /home/jenkins
+      NPM_CONFIG_CACHE: /home/jenkins/.npm
     envFrom:
     - sourceName: cicd
       sourceKey: NPM_TOKEN
