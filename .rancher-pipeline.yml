@@ -14,6 +14,9 @@ stages:
     - sourceName: cicd
       sourceKey: NPM_PASS
       targetKey: NPM_PASS
+    - sourceName: cicd
+      sourceKey: NPM_TOKEN
+      targetKey: NPM_TOKEN
 - name: Test
   steps:
   - runScriptConfig:
