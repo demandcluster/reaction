@@ -15,6 +15,7 @@ RUN chown node:node .
 # base image is built)
 RUN npm i -g npm@latest
 
+COPY --chown=node:node ./npm_token ./npm_token
 RUN . ./npm_token
 # Copy specific things so that we can keep the image
 # as small as possible without relying on each repo
@@ -39,6 +40,7 @@ RUN echo $NPM_TOKEN
 RUN npm i --only=prod
 # delete npm token
 RUN rm -f .npmrc || :
+RUN rm -f npm_token || :
 
 # The base image copies /src but we need to copy additional folders in this project
 COPY --chown=node:node ./public ./public
