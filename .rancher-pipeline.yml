@@ -11,6 +11,7 @@ stages:
       HOME: /home/jenkins
       NPM_CONFIG_CACHE: /home/jenkins/.npm
       NPM_USER: demandcluster
+      KUBECTL_ACTION: replace
     envFrom:
     - sourceName: cicd
       sourceKey: NPM_TOKEN
