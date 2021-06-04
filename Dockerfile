@@ -1,7 +1,7 @@
 FROM node:14.15.0-alpine
 
 # hadolint ignore=DL3018
-RUN apk --no-cache add bash curl less tini vim make python2 git g++ glib
+RUN apk --no-cache add bash curl less tini vim make python2 git g++ glib libvips-dev
 SHELL ["/bin/bash", "-o", "pipefail", "-o", "errexit", "-u", "-c"]
 
 WORKDIR /usr/local/src/app
