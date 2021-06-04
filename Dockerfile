@@ -15,8 +15,8 @@ RUN chown node:node .
 # base image is built)
 RUN npm i -g npm@latest
 
-COPY --chown=node:node ./npm_token ./npm_token
-RUN chmod +x ./npm_token
+#COPY --chown=node:node ./npm_token ./npm_token
+#RUN chmod +x ./npm_token
 
 # Copy specific things so that we can keep the image
 # as small as possible without relying on each repo
@@ -41,7 +41,7 @@ RUN npm set registry https://npm.demandcluster.com
 RUN npm i --only=prod --no-scripts
 # delete npm token
 RUN rm -f .npmrc || :
-RUN rm -f npm_token || :
+#RUN rm -f npm_token || :
 
 RUN cd node_modules/sharp && (node install/libvips && node install/dll-copy && prebuild-install) || (node-gyp rebuild && node install/dll-copy)
 
