@@ -1,23 +1,4 @@
 stages:
-- name: Install
-  steps:
-  - runScriptConfig:
-      image: node:lts
-      shellScript: |-
-        apt-get update
-        apt-get install libvips-dev --no-install-recommends -y
-        npm i -g npm:latest
-        npm set registry https://npm.demandcluster.com
-        npm ci
-        echo export NPM_TOKEN=${NPM_TOKEN} >> npm_token
-        chmod +x npm_token
-    env:
-      HOME: /home/jenkins
-      NPM_CONFIG_CACHE: /home/jenkins/.npm
-      NPM_USER: demandcluster
-    envFrom:
-    - sourceName: cicd
-      sourceKey: NPM_TOKEN
 - name: Publish
   steps:
   - publishImageConfig:
