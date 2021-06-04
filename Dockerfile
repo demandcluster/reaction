@@ -1,7 +1,7 @@
 FROM node:14.15.0-alpine
 
 # hadolint ignore=DL3018
-RUN apk --no-cache add bash curl less tini vim make python2 git g++ glib libvips-dev
+RUN apk --no-cache add bash curl less tini vim make python2 git g++ glib vips-dev
 SHELL ["/bin/bash", "-o", "pipefail", "-o", "errexit", "-u", "-c"]
 
 WORKDIR /usr/local/src/app
@@ -38,10 +38,12 @@ USER node
 RUN npm set registry https://npm.demandcluster.com
 # RUN source ./npm_token
 # Install dependencies
-RUN npm i --only=prod
+RUN npm i --only=prod --no-script
 # delete npm token
 RUN rm -f .npmrc || :
 RUN rm -f npm_token || :
+
+RUN cd node_modules/sharp && (node install/libvips && node install/dll-copy && prebuild-install) || (node-gyp rebuild && node install/dll-copy)
 
 # The base image copies /src but we need to copy additional folders in this project
 COPY --chown=node:node ./public ./public
