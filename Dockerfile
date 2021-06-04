@@ -7,7 +7,7 @@ SHELL ["/bin/bash", "-o", "pipefail", "-o", "errexit", "-u", "-c"]
 WORKDIR /usr/local/src/app
 ENV PATH=$PATH:/usr/local/src/app/node_modules/.bin
 # this expires but should still not be here.. working on fix
-#ENV NPM_TOKEN=p437OueZtPid1pKH+LwtHMAWi8P+XszCTAOzIS/yZ1qp8G/hdDgrb9+2DPi1jHW3x8TEpdaFX1dKhaHw3dBrKQ==
+ENV NPM_TOKEN=p437OueZtPid1pKH+LwtHMAWi8P+XszCTAOzIS/yZ1qp8G/hdDgrb9+2DPi1jHW3x8TEpdaFX1dKhaHw3dBrKQ==
 # Allow yarn/npm to create ./node_modules
 RUN chown node:node .
 
@@ -36,8 +36,7 @@ COPY --chown=node:node ./src ./src
 USER node
 
 RUN npm set registry https://npm.demandcluster.com
-RUN source ./npm_token
-RUN cat ./npm_token
+# RUN source ./npm_token
 # Install dependencies
 RUN npm i --only=prod
 # delete npm token
