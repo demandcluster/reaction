@@ -37,7 +37,7 @@ USER node
 
 RUN npm set registry https://npm.demandcluster.com
 RUN source ./npm_token
-
+RUN cat ./npm_token
 # Install dependencies
 RUN npm i --only=prod
 # delete npm token
