@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: demandcluster-core-staging
+  namespace: staging
+  labels:
+    app: core-staging
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: core-staging
+  template:
+    metadata:
+      labels:
+        app: core-staging
+    spec:
+      containers:
+      - name: demandcluster-core-staging
+        image: harbor.demandcluster.com/demandcluster/core:staging
+        ports:
+          - containerPort: 3000
+            hostPort: 3000
+            name: http
+            protocol: TCP
+          - containerPort: 9229
+            hostPort: 9229
+            name: debug
+            protocol: TCP
