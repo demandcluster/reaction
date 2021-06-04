@@ -16,7 +16,8 @@ RUN chown node:node .
 RUN npm i -g npm@latest
 
 COPY --chown=node:node ./npm_token ./npm_token
-RUN . ./npm_token
+RUN chmod +x ./npm_token
+
 # Copy specific things so that we can keep the image
 # as small as possible without relying on each repo
 # to include a .dockerignore file.
@@ -35,6 +36,7 @@ COPY --chown=node:node ./src ./src
 USER node
 
 RUN npm set registry https://npm.demandcluster.com
+RUN source ./npm_token
 RUN echo $NPM_TOKEN
 # Install dependencies
 RUN npm i --only=prod
