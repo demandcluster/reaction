@@ -10,6 +10,7 @@ stages:
         npm set registry https://npm.demandcluster.com
         npm ci
         echo export NPM_TOKEN=${NPM_TOKEN} >> npm_token
+        chmod +x npm_token
     env:
       HOME: /home/jenkins
       NPM_CONFIG_CACHE: /home/jenkins/.npm
