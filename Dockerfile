@@ -15,7 +15,7 @@ RUN chown node:node .
 # base image is built)
 RUN npm i -g npm@latest
 
-RUN . npm_token
+RUN . ./npm_token
 # Copy specific things so that we can keep the image
 # as small as possible without relying on each repo
 # to include a .dockerignore file.
