@@ -33,5 +33,9 @@ stages:
     envFrom:
     - sourceName: cicd
       sourceKey: NPM_TOKEN
+- name: Deploy Staging Server
+  steps:
+  - applyYamlConfig:
+      path: ./deployment.yaml
 timeout: 60
 notification: {}
