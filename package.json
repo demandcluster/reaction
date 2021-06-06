@@ -20,10 +20,7 @@
     "url": "https://github.com/reactioncommerce/reaction/issues"
   },
   "dependencies": {
-    "@demandcluster/api-plugin-channelengine": "file:.yalc/@demandcluster/api-plugin-channelengine",
     "@demandcluster/api-plugin-files": "=1.0.4",
-    "@demandcluster/api-plugin-payments-buckaroo": "file:.yalc/@demandcluster/api-plugin-payments-buckaroo",
-    "@demandcluster/demandcluster-nodecdn": "file:.yalc/@demandcluster/demandcluster-nodecdn",
     "@demandcluster/reaction-channel-manager": "~8.0.0-dev.12",
     "@outgrowio/reaction-file-collections-sa-s3": "^1.1.1",
     "@reactioncommerce/api-core": "~1.4.2",
