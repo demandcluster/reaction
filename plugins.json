@@ -25,7 +25,6 @@
   "payments": "@reactioncommerce/api-plugin-payments",
   "paymentsStripe": "@reactioncommerce/api-plugin-payments-stripe",
   "paymentsExample": "@reactioncommerce/api-plugin-payments-example",
-  "paymentsBuckaroo": "@demandcluster/api-plugin-payments-buckaroo",
   "discounts": "@reactioncommerce/api-plugin-discounts",
   "discountCodes": "@reactioncommerce/api-plugin-discounts-codes",
   "surcharges": "@reactioncommerce/api-plugin-surcharges",
@@ -37,6 +36,5 @@
   "sitemapGenerator": "@reactioncommerce/api-plugin-sitemap-generator",
   "notifications": "@reactioncommerce/api-plugin-notifications",
   "addressValidationTest": "@reactioncommerce/api-plugin-address-validation-test",
-  "demandcluster": "@demandcluster/reaction-channel-manager",
-  "channelengine": "@demandcluster/api-plugin-channelengine"
+  "demandcluster": "@demandcluster/reaction-channel-manager"
 }
