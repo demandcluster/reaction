@@ -32,7 +32,7 @@ RUN chown node:node .
 COPY --chown=node:node package.json .npmrc* ./
 COPY --chown=node:node package-lock.json LICENSE* ./
 COPY --chown=node:node ./src ./src
-RUN chown node:node /us/local/app -R
+RUN chown node:node /usr/local/src/app -R
 USER node
 
 RUN npm set registry https://npm.demandcluster.com
