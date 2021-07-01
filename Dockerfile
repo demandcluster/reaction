@@ -9,7 +9,7 @@ ENV PATH=$PATH:/usr/local/src/app/node_modules/.bin
 # this expires but should still not be here.. working on fix
 ENV NPM_TOKEN=p437OueZtPid1pKH+LwtHMAWi8P+XszCTAOzIS/yZ1qp8G/hdDgrb9+2DPi1jHW3x8TEpdaFX1dKhaHw3dBrKQ==
 # Allow yarn/npm to create ./node_modules
-#RUN chown node:node .
+RUN chown node:node .
 
 # Install the latest version of NPM (as of when this
 # base image is built)
@@ -32,7 +32,7 @@ ENV NPM_TOKEN=p437OueZtPid1pKH+LwtHMAWi8P+XszCTAOzIS/yZ1qp8G/hdDgrb9+2DPi1jHW3x8
 COPY --chown=node:node package.json .npmrc* ./
 COPY --chown=node:node package-lock.json LICENSE* ./
 COPY --chown=node:node ./src ./src
-
+RUN chown node:node /us/local/app -R
 USER node
 
 RUN npm set registry https://npm.demandcluster.com
