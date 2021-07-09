@@ -23,9 +23,6 @@ spec:
               hostPort: 3000
               name: http
               protocol: TCP
-          envFrom:
-            - secretRef:
-                name: staging-api
             - containerPort: 9229
               hostPort: 9229
               name: debug
