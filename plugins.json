@@ -36,6 +36,5 @@
   "sitemapGenerator": "@reactioncommerce/api-plugin-sitemap-generator",
   "notifications": "@reactioncommerce/api-plugin-notifications",
   "addressValidationTest": "@reactioncommerce/api-plugin-address-validation-test",
-  "demandcluster": "@demandcluster/reaction-channel-manager",
-  "dc-marketplace": "@outgrowio/reaction-marketplace/index.js"
+  "demandcluster": "@demandcluster/reaction-channel-manager"
 }
