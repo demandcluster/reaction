@@ -27,5 +27,9 @@ spec:
               hostPort: 9229
               name: debug
               protocol: TCP
+          envFron:
+            - secretRef:
+                name: staging-api
+      imagePullPolicy: Always
       imagePullSecrets:
         - name: staging-deploy
