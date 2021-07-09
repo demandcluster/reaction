@@ -30,6 +30,6 @@ spec:
           envFrom:
             - secretRef:
                 name: staging-api
-      imagePullPolicy: Always
+          imagePullPolicy: Always
       imagePullSecrets:
         - name: staging-deploy
