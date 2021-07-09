@@ -23,7 +23,7 @@
     "@demandcluster/api-plugin-files": "=1.0.4",
     "@demandcluster/demandcluster-nodecdn": "^0.2.9",
     "@demandcluster/demandcluster-rules": "^0.4.99",
-    "@demandcluster/reaction-channel-manager": "^8.1.0-dev.10",
+    "@demandcluster/reaction-channel-manager": "^8.1.0-dev.11",
     "@graphql-modules/core": "^0.7.17",
     "@outgrowio/reaction-file-collections-sa-s3": "^1.1.1",
     "@reactioncommerce/api-core": "~1.4.2",
