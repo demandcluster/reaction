@@ -4,16 +4,16 @@ metadata:
   name: demandcluster-core-staging
   namespace: staging
   labels:
-    app: core-staging
+    app: core
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: core-staging
+      app: core
   template:
     metadata:
       labels:
-        app: core-staging
+        app: core
     spec:
       containers:
         - name: demandcluster-core-staging
