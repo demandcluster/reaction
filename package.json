@@ -20,7 +20,7 @@
     "url": "https://github.com/reactioncommerce/reaction/issues"
   },
   "dependencies": {
-    "@demandcluster/api-plugin-files": "^1.0.4",
+    "@demandcluster/api-plugin-files": "^1.16.1",
     "@demandcluster/demandcluster-nodecdn": "^0.2.9",
     "@demandcluster/demandcluster-rules": "^0.4.99",
     "@demandcluster/reaction-channel-manager": "^8.1.0-dev.16",
