@@ -37,5 +37,7 @@
   "notifications": "@reactioncommerce/api-plugin-notifications",
   "addressValidationTest": "@reactioncommerce/api-plugin-address-validation-test",
   "demandcluster": "@demandcluster/reaction-channel-manager",
-  "dc-marketplace": "@outgrowio/reaction-marketplace/index.js"
+  "dc-marketplace": "@outgrowio/reaction-marketplace/index.js", 
+  "addressValidationPostNL": "@demandcluster/api-plugin-address-validation-postnl",
+  "search": "@demandcluster/api-plugin-search"
 }

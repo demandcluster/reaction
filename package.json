@@ -20,10 +20,12 @@
     "url": "https://github.com/reactioncommerce/reaction/issues"
   },
   "dependencies": {
+    "@demandcluster/api-plugin-address-validation-postnl": "file:.yalc/@demandcluster/api-plugin-address-validation-postnl",
     "@demandcluster/api-plugin-files": "=1.0.4",
+    "@demandcluster/api-plugin-search": "file:.yalc/@demandcluster/api-plugin-search",
     "@demandcluster/demandcluster-nodecdn": "^0.2.9",
     "@demandcluster/demandcluster-rules": "^0.4.99",
-    "@demandcluster/reaction-channel-manager": "^8.1.0-dev.11",
+    "@demandcluster/reaction-channel-manager": "^8.1.0-dev.16",
     "@graphql-modules/core": "^0.7.17",
     "@outgrowio/reaction-file-collections-sa-s3": "^1.1.1",
     "@reactioncommerce/api-core": "~1.4.2",
@@ -39,6 +41,7 @@
     "@reactioncommerce/api-plugin-email": "~1.0.1",
     "@reactioncommerce/api-plugin-email-smtp": "^1.0.3",
     "@reactioncommerce/api-plugin-email-templates": "~1.0.1",
+    "@reactioncommerce/api-plugin-example": "file:.yalc/@reactioncommerce/api-plugin-example",
     "@reactioncommerce/api-plugin-i18n": "^1.0.4",
     "@reactioncommerce/api-plugin-inventory": "^1.0.3",
     "@reactioncommerce/api-plugin-inventory-simple": "^1.0.4",
@@ -111,7 +114,7 @@
   },
   "scripts": {
     "start": "node --experimental-modules --experimental-json-modules ./src/index.js",
-    "start:dev": "npm run check-node-version && NODE_ENV=development NODE_OPTIONS='--experimental-modules --experimental-json-modules –-max-old-space-size=4096' nodemon ./src/index.js",
+    "start:dev": "npm run check-node-version && NODE_ENV=development NODE_OPTIONS='--experimental-modules --experimental-json-modules –-max-old-space-size=4096' nodemon --watch node_modules/@demandcluster --watch src ./src/index.js",
     "inspect": "NODE_ENV=development node --experimental-modules --experimental-json-modules --inspect ./src/index.js",
     "inspect-brk": "NODE_ENV=development node --experimental-modules --experimental-json-modules --inspect-brk ./src/index.js",
     "inspect:docker": "NODE_ENV=development nodemon --preserve-symlinks --experimental-modules --experimental-json-modules --inspect=0.0.0.0:9229 ./src/index.js",
