@@ -1,7 +1,7 @@
 {
   "simpleSchema": "@reactioncommerce/api-plugin-simple-schema",
   "jobQueue": "@reactioncommerce/api-plugin-job-queue",
-  "files": "@demandcluster/api-plugin-files",
+  "files": "@demandcluster/api-plugin-nodecdn",
   "shops": "@reactioncommerce/api-plugin-shops",
   "settings": "@reactioncommerce/api-plugin-settings",
   "i18": "@reactioncommerce/api-plugin-i18n",
