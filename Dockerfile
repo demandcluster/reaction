@@ -44,7 +44,6 @@ RUN npm i --only=prod --no-scripts
 RUN rm -f .npmrc || :
 #RUN rm -f npm_token || :
 
-#RUN cd node_modules/sharp && (node install/libvips && node install/dll-copy && prebuild-install) || (node-gyp rebuild && node install/dll-copy)
 
 # The base image copies /src but we need to copy additional folders in this project
 COPY --chown=node:node ./public ./public
