@@ -1371,10 +1371,10 @@
     "axios" "^0.21.1"
     "envalid" "^7.1.0"
 
-"@demandcluster/demandcluster-nodecdn@^0.3.2", "@demandcluster/demandcluster-nodecdn@^0.3.3", "@demandcluster/demandcluster-nodecdn@file:.yalc/@demandcluster/demandcluster-nodecdn":
-  "integrity" "sha512-3jNTuGZp+IWRzzPiSWhA3MsPNpr6VsIE/U0KAgtz0+uIKN7XtjtwEkWuffx0I7wwZOgtQ56n5tJdB9DcIAqEhA=="
-  "resolved" "https://npm.demandcluster.com/@demandcluster%2fdemandcluster-nodecdn/-/demandcluster-nodecdn-0.3.3.tgz"
-  "version" "0.3.3"
+"@demandcluster/demandcluster-nodecdn@^0.3.2", "@demandcluster/demandcluster-nodecdn@^0.3.4", "@demandcluster/demandcluster-nodecdn@file:.yalc/@demandcluster/demandcluster-nodecdn":
+  "integrity" "sha512-JOxava9sB9ozzTDyEuZyRaRR7E/G5Phx+Ri5V6GKg+ZjyzO47rpyGBEFXTlRnqCT7EDacl6ZPWJVBrPoM5QW+w=="
+  "resolved" "https://npm.demandcluster.com/@demandcluster%2fdemandcluster-nodecdn/-/demandcluster-nodecdn-0.3.4.tgz"
+  "version" "0.3.4"
   dependencies:
     "@outgrowio/reaction-file-collections-sa-s3" "^1.1.1"
     "@reactioncommerce/file-collections" "^0.9.3"
