@@ -1371,8 +1371,9 @@
     "axios" "^0.21.1"
     "envalid" "^7.1.0"
 
-"@demandcluster/demandcluster-nodecdn@^0.3.2", "@demandcluster/demandcluster-nodecdn@file:.yalc/@demandcluster/demandcluster-nodecdn":
-  "resolved" "file:.yalc/@demandcluster/demandcluster-nodecdn"
+"@demandcluster/demandcluster-nodecdn@^0.3.2", "@demandcluster/demandcluster-nodecdn@^0.3.3", "@demandcluster/demandcluster-nodecdn@file:.yalc/@demandcluster/demandcluster-nodecdn":
+  "integrity" "sha512-3jNTuGZp+IWRzzPiSWhA3MsPNpr6VsIE/U0KAgtz0+uIKN7XtjtwEkWuffx0I7wwZOgtQ56n5tJdB9DcIAqEhA=="
+  "resolved" "https://npm.demandcluster.com/@demandcluster%2fdemandcluster-nodecdn/-/demandcluster-nodecdn-0.3.3.tgz"
   "version" "0.3.3"
   dependencies:
     "@outgrowio/reaction-file-collections-sa-s3" "^1.1.1"
@@ -1382,10 +1383,10 @@
     "node-fetch" "^2.6.1"
     "sharp" "^0.28.3"
 
-"@demandcluster/demandcluster-rules@^0.4.99":
-  "integrity" "sha512-XKgJYME8UNwuTjy8mFhA8uYH1S/BpRm4bV1utGmEJma74lmXCb+pKStu7c2a/tWzvavj3aJqHQCLuaAAJcFoVw=="
-  "resolved" "https://npm.demandcluster.com/@demandcluster%2fdemandcluster-rules/-/demandcluster-rules-0.4.99.tgz"
-  "version" "0.4.99"
+"@demandcluster/demandcluster-rules@^0.5.15":
+  "integrity" "sha512-lyx0N4EJKQzGUIKvfSk//FeiivARKg5ySC33CkmreJoH+dFJaX+2xvNfkF5x7VI4UWaEvq6JEpz/8dclCQ9c8A=="
+  "resolved" "https://npm.demandcluster.com/@demandcluster%2fdemandcluster-rules/-/demandcluster-rules-0.5.15.tgz"
+  "version" "0.5.15"
 
 "@demandcluster/reaction-channel-manager@^8.1.0-dev.16":
   "integrity" "sha512-nhcTyW9+FUzTEi1H45zHugKq87QNPZbDQHytUiGNad8vCQOtniMPEudVtICeEbolxgfx+K0i65E3+8VjqC16Sw=="
@@ -2307,21 +2308,13 @@
   "resolved" "https://registry.npmjs.org/@reactioncommerce/eslint-config/-/eslint-config-2.2.0.tgz"
   "version" "2.2.0"
 
-"@reactioncommerce/file-collections-sa-base@^0.1.1":
+"@reactioncommerce/file-collections-sa-base@^0.1.1", "@reactioncommerce/file-collections-sa-base@^0.2.2":
   "integrity" "sha512-kygkaSvUXoxqvKIOvaiuRiJFLgaJsUrcBCvR3BL17NcBq8t94JlVPQOpkoWBALgULeT2eDaaKpqnbDy66p8fzw=="
   "resolved" "https://registry.npmjs.org/@reactioncommerce/file-collections-sa-base/-/file-collections-sa-base-0.1.1.tgz"
   "version" "0.1.1"
   dependencies:
     "@babel/runtime-corejs2" "^7.7.6"
     "debug" "^3.1.0"
-
-"@reactioncommerce/file-collections-sa-base@^0.2.2":
-  "integrity" "sha512-M2O3VnDVrHzGBCfRjefkuOfVVC1VYXfMAsrOs00kD2ZyKLEisCYUXfqhoYXi3y0aYdSsnGoKnXNbwvcV/0hPpg=="
-  "resolved" "https://registry.npmjs.org/@reactioncommerce/file-collections-sa-base/-/file-collections-sa-base-0.2.2.tgz"
-  "version" "0.2.2"
-  dependencies:
-    "@babel/runtime-corejs2" "^7.10.5"
-    "debug" "^4.1.1"
 
 "@reactioncommerce/file-collections-sa-gridfs@^0.1.5", "@reactioncommerce/file-collections-sa-gridfs@~0.1.5":
   "integrity" "sha512-nT5hyTvv7rkV9PtuBuYB0Z4Ns/kEGeMhtosbpbcvfHzQLfQ9TKZqQGoqwW71mjiT+5lPZ3QCUXQV0MqfC6znPg=="
