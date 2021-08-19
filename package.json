@@ -22,7 +22,7 @@
   "dependencies": {
     "@demandcluster/api-plugin-catalogs": "^1.1.2-dc-0",
     "@demandcluster/api-plugin-nodecdn": "^1.16.5-dev.1",
-    "@demandcluster/demandcluster-nodecdn": "^0.3.4",
+    "@demandcluster/demandcluster-nodecdn": "^0.3.5",
     "@demandcluster/demandcluster-rules": "^0.5.15",
     "@demandcluster/reaction-channel-manager": "^8.1.0-dev.16",
     "@graphql-modules/core": "^0.7.17",
