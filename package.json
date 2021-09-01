@@ -20,6 +20,7 @@
     "url": "https://github.com/reactioncommerce/reaction/issues"
   },
   "dependencies": {
+    "@demandcluster/api-plugin-address-validation-postnl": "^0.0.1",
     "@demandcluster/api-plugin-catalogs": "^1.1.2-dc-0",
     "@demandcluster/api-plugin-nodecdn": "^1.16.5-dev.1",
     "@demandcluster/demandcluster-nodecdn": "^0.3.5",
