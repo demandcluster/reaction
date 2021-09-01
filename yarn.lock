@@ -1327,10 +1327,11 @@
   "version" "0.0.0-development"
   dependencies:
     "@reactioncommerce/api-utils" "^1.16.5"
+    "axios" "^0.21.1"
+    "request" "^2.88.2"
 
-"@demandcluster/api-plugin-apikeys@^0.0.5":
-  "integrity" "sha512-Dj/xkA8R1gyQhqnvhr+X84jx+UqIelpZC/9ZvGOZnS6skc0BKX5SN1FsUXMYleNK5+2JC5w6ACBOvEC25oLr8A=="
-  "resolved" "https://npm.demandcluster.com/@demandcluster%2fapi-plugin-apikeys/-/api-plugin-apikeys-0.0.5.tgz"
+"@demandcluster/api-plugin-apikeys@file:.yalc/@demandcluster/api-plugin-apikeys":
+  "resolved" "file:.yalc/@demandcluster/api-plugin-apikeys"
   "version" "0.0.5"
   dependencies:
     "@reactioncommerce/api-utils" "^1.14.4"
@@ -1371,10 +1372,10 @@
     "axios" "^0.21.1"
     "envalid" "^7.1.0"
 
-"@demandcluster/demandcluster-nodecdn@^0.3.2", "@demandcluster/demandcluster-nodecdn@^0.3.4", "@demandcluster/demandcluster-nodecdn@file:.yalc/@demandcluster/demandcluster-nodecdn":
-  "integrity" "sha512-JOxava9sB9ozzTDyEuZyRaRR7E/G5Phx+Ri5V6GKg+ZjyzO47rpyGBEFXTlRnqCT7EDacl6ZPWJVBrPoM5QW+w=="
-  "resolved" "https://npm.demandcluster.com/@demandcluster%2fdemandcluster-nodecdn/-/demandcluster-nodecdn-0.3.4.tgz"
-  "version" "0.3.4"
+"@demandcluster/demandcluster-nodecdn@^0.3.2", "@demandcluster/demandcluster-nodecdn@^0.3.6", "@demandcluster/demandcluster-nodecdn@file:.yalc/@demandcluster/demandcluster-nodecdn":
+  "integrity" "sha512-i1cs27b10vjGnm+bbM+ZmFT0rDhweU+/FpaHPSs32sClGM8n5jgNUuLrHHkhVRNyuVEAahRJzhiGklJdXrXF2A=="
+  "resolved" "https://npm.demandcluster.com/@demandcluster%2fdemandcluster-nodecdn/-/demandcluster-nodecdn-0.3.6.tgz"
+  "version" "0.3.6"
   dependencies:
     "@outgrowio/reaction-file-collections-sa-s3" "^1.1.1"
     "@reactioncommerce/file-collections" "^0.9.3"
@@ -5454,9 +5455,9 @@
   "version" "1.0.0"
 
 "follow-redirects@^1.10.0":
-  "integrity" "sha512-HWqDgT7ZEkqRzBvc2s64vSZ/hfOceEol3ac/7tKwzuvEyWx3/4UegXh5oBOIotkGsObyk3xznnSRVADBgWSQVg=="
-  "resolved" "https://registry.npmjs.org/follow-redirects/-/follow-redirects-1.14.1.tgz"
-  "version" "1.14.1"
+  "integrity" "sha512-yLR6WaE2lbF0x4K2qE2p9PEXKLDjUjnR/xmjS3wHAYxtlsI9MLLBJUZirAHKzUZDGLxje7w/cXR49WOUo4rbsA=="
+  "resolved" "https://registry.npmjs.org/follow-redirects/-/follow-redirects-1.14.2.tgz"
+  "version" "1.14.2"
 
 "follow-redirects@1.5.10":
   "integrity" "sha512-0V5l4Cizzvqt5D44aTXbFZz+FtyXV1vrDN6qrelxtfYQKW0KO0W2T/hkE8xvGa/540LkZlkaUjO4ailYTFtHVQ=="
@@ -9019,7 +9020,7 @@
     "stealthy-require" "^1.1.1"
     "tough-cookie" "^2.3.3"
 
-"request@^2.34", "request@^2.79.0", "request@^2.81.0", "request@^2.85.0", "request@^2.88.0", "request@>=2.76.0 <3.0.0":
+"request@^2.34", "request@^2.79.0", "request@^2.81.0", "request@^2.85.0", "request@^2.88.0", "request@^2.88.2", "request@>=2.76.0 <3.0.0":
   "integrity" "sha512-MsvtOrfG9ZcrOwAW+Qi+F6HbD0CWXEh9ou77uOb7FM2WPhwT7smM833PzanhJLsgXjN89Ir6V2PczXNnMpwKhw=="
   "resolved" "https://registry.npmjs.org/request/-/request-2.88.2.tgz"
   "version" "2.88.2"

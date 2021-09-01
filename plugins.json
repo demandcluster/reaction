@@ -38,7 +38,6 @@
   "addressValidationTest": "@reactioncommerce/api-plugin-address-validation-test",
   "addressValudationPostNL":"@demandcluster/api-plugin-address-validation-postnl",
   "demandcluster": "@demandcluster/reaction-channel-manager",
-  "channelengine": "@demandcluster/api-plugin-channelengine",
   "paymentsBukaroo": "@demandcluster/api-plugin-payments-buckaroo",
   "apikeys": "@demandcluster/api-plugin-apikeys"
 }
