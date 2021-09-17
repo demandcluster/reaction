@@ -59,7 +59,7 @@
     "@reactioncommerce/api-plugin-products": "~1.0.2",
     "@reactioncommerce/api-plugin-settings": "^1.0.2",
     "@reactioncommerce/api-plugin-shipments": "^1.0.1",
-    "@reactioncommerce/api-plugin-shipments-flat-rate": "^1.0.4",
+    "@demandcluster/api-plugin-shipments-flat-rate": "^1.2.0",
     "@reactioncommerce/api-plugin-shops": "^1.2.2",
     "@reactioncommerce/api-plugin-simple-schema": "~1.0.1",
     "@reactioncommerce/api-plugin-sitemap-generator": "^1.2.2",
