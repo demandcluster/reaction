@@ -22,6 +22,7 @@
   "inventorySimple": "@reactioncommerce/api-plugin-inventory-simple",
   "carts": "@reactioncommerce/api-plugin-carts",
   "orders": "@reactioncommerce/api-plugin-orders",
+  "merchantorders": "@demandcluster/api-plugin-orders-merchant",
   "payments": "@reactioncommerce/api-plugin-payments",
   "paymentsStripe": "@reactioncommerce/api-plugin-payments-stripe",
   "paymentsExample": "@reactioncommerce/api-plugin-payments-example",
@@ -36,8 +37,10 @@
   "sitemapGenerator": "@reactioncommerce/api-plugin-sitemap-generator",
   "notifications": "@reactioncommerce/api-plugin-notifications",
   "addressValidationTest": "@reactioncommerce/api-plugin-address-validation-test",
-  "addressValudationPostNL":"@demandcluster/api-plugin-address-validation-postnl",
+  "addressValidationPostNL": "@demandcluster/api-plugin-address-validation-postnl",
   "demandcluster": "@demandcluster/reaction-channel-manager",
-  "paymentsBukaroo": "@demandcluster/api-plugin-payments-buckaroo",
-  "apikeys": "@demandcluster/api-plugin-apikeys"
+  "paymentsBuckaroo": "@demandcluster/api-plugin-payments-buckaroo",
+  "apikeys": "@demandcluster/api-plugin-apikeys",
+  "demandcms": "@demandcluster/api-plugin-strapi",
+  "cartExtend": "@demandcluster/api-plugin-cart-extend"
 }
