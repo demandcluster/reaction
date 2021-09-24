@@ -15,7 +15,7 @@
   "authentication": "@reactioncommerce/api-plugin-authentication",
   "authorization": "@reactioncommerce/api-plugin-authorization-simple",
   "products": "@reactioncommerce/api-plugin-products",
-  "catalogs": "@reactioncommerce/api-plugin-catalogs",
+  "catalogs": "@demandcluster/api-plugin-catalogs",
   "tags": "@reactioncommerce/api-plugin-tags",
   "pricingSimple": "@reactioncommerce/api-plugin-pricing-simple",
   "inventory": "@reactioncommerce/api-plugin-inventory",
@@ -36,11 +36,7 @@
   "navigation": "@reactioncommerce/api-plugin-navigation",
   "sitemapGenerator": "@reactioncommerce/api-plugin-sitemap-generator",
   "notifications": "@reactioncommerce/api-plugin-notifications",
-  "addressValidationTest": "@reactioncommerce/api-plugin-address-validation-test",
   "addressValidationPostNL": "@demandcluster/api-plugin-address-validation-postnl",
   "demandcluster": "@demandcluster/reaction-channel-manager",
-  "paymentsBuckaroo": "@demandcluster/api-plugin-payments-buckaroo",
-  "apikeys": "@demandcluster/api-plugin-apikeys",
-  "demandcms": "@demandcluster/api-plugin-strapi",
-  "cartExtend": "@demandcluster/api-plugin-cart-extend"
+  "demandcms": "@demandcluster/api-plugin-strapi"
 }
