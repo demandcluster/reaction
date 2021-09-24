@@ -37,10 +37,6 @@
   "sitemapGenerator": "@reactioncommerce/api-plugin-sitemap-generator",
   "notifications": "@reactioncommerce/api-plugin-notifications",
   "addressValidationPostNL": "@demandcluster/api-plugin-address-validation-postnl",
-<<<<<<< HEAD
-  "demandcluster": "@demandcluster/reaction-channel-manager"
-=======
   "demandcluster": "@demandcluster/reaction-channel-manager",
   "demandcms": "@demandcluster/api-plugin-strapi"
->>>>>>> trunk
 }
