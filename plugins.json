@@ -22,6 +22,7 @@
   "inventorySimple": "@reactioncommerce/api-plugin-inventory-simple",
   "carts": "@reactioncommerce/api-plugin-carts",
   "orders": "@reactioncommerce/api-plugin-orders",
+  "ordersMerchant": "@demandcluster/api-plugin-orders-merchant",
   "payments": "@reactioncommerce/api-plugin-payments",
   "paymentsStripe": "@reactioncommerce/api-plugin-payments-stripe",
   "paymentsExample": "@reactioncommerce/api-plugin-payments-example",
@@ -29,12 +30,17 @@
   "discountCodes": "@reactioncommerce/api-plugin-discounts-codes",
   "surcharges": "@reactioncommerce/api-plugin-surcharges",
   "shipments": "@reactioncommerce/api-plugin-shipments",
-  "shipmentsFlatRate": "@reactioncommerce/api-plugin-shipments-flat-rate",
+  "shipmentsFlatRate": "@demandcluster/api-plugin-shipments-flat-rate",
   "taxes": "@reactioncommerce/api-plugin-taxes",
   "taxesFlatRate": "@reactioncommerce/api-plugin-taxes-flat-rate",
   "navigation": "@reactioncommerce/api-plugin-navigation",
   "sitemapGenerator": "@reactioncommerce/api-plugin-sitemap-generator",
   "notifications": "@reactioncommerce/api-plugin-notifications",
   "addressValidationPostNL": "@demandcluster/api-plugin-address-validation-postnl",
+<<<<<<< HEAD
   "demandcluster": "@demandcluster/reaction-channel-manager"
+=======
+  "demandcluster": "@demandcluster/reaction-channel-manager",
+  "demandcms": "@demandcluster/api-plugin-strapi"
+>>>>>>> trunk
 }
