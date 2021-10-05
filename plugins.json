@@ -38,5 +38,6 @@
   "notifications": "@reactioncommerce/api-plugin-notifications",
   "addressValidationPostNL": "@demandcluster/api-plugin-address-validation-postnl",
   "demandcluster": "@demandcluster/reaction-channel-manager",
-  "demandcms": "@demandcluster/api-plugin-strapi"
+  "demandcms": "@demandcluster/api-plugin-strapi",
+  "cartExtend": "@demandcluster/api-plugin-cart-extend"
 }
