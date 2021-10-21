@@ -39,5 +39,6 @@
   "addressValidationPostNL": "@demandcluster/api-plugin-address-validation-postnl",
   "demandcluster": "@demandcluster/reaction-channel-manager",
   "demandcms": "@demandcluster/api-plugin-strapi",
-  "cartExtend": "@demandcluster/api-plugin-cart-extend"
+  "cartExtend": "@demandcluster/api-plugin-cart-extend",
+  "buckarooPayments": "@demandcluster/api-plugin-payments-buckaroo"
 }
