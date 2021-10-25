@@ -1,7 +1,7 @@
 {
   "simpleSchema": "@reactioncommerce/api-plugin-simple-schema",
   "jobQueue": "@reactioncommerce/api-plugin-job-queue",
-  "files": "@demandcluster/api-plugin-nodecdn",
+  "files": "@demandcluster/api-plugin-files",
   "shops": "@reactioncommerce/api-plugin-shops",
   "settings": "@reactioncommerce/api-plugin-settings",
   "i18": "@reactioncommerce/api-plugin-i18n",
@@ -41,5 +41,5 @@
   "demandcms": "@demandcluster/api-plugin-strapi",
   "cartExtend": "@demandcluster/api-plugin-cart-extend",
   "buckarooPayments": "@demandcluster/api-plugin-payments-buckaroo",
-  "merchants": "@demandcluster/api-plugin-merchants"
+  "wishlist": "@demandcluster/api-plugin-wishlists"
 }
