@@ -40,6 +40,5 @@
   "demandcluster": "@demandcluster/reaction-channel-manager",
   "demandcms": "@demandcluster/api-plugin-strapi",
   "cartExtend": "@demandcluster/api-plugin-cart-extend",
-  "buckarooPayments": "@demandcluster/api-plugin-payments-buckaroo",
-  "wishlist": "@demandcluster/api-plugin-wishlists"
+  "buckarooPayments": "@demandcluster/api-plugin-payments-buckaroo"
 }
