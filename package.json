@@ -25,7 +25,7 @@
     "@demandcluster/api-plugin-catalogs": "^1.1.2-dc-0",
     "@demandcluster/api-plugin-files": "~1.1.0",
     "@demandcluster/api-plugin-merchants": "^1.0.1",
-    "@demandcluster/api-plugin-orders": "^1.5.1",
+    "@demandcluster/api-plugin-orders": "^1.5.2",
     "@demandcluster/api-plugin-orders-merchant": "^1.2.0",
     "@demandcluster/api-plugin-payments-buckaroo": "^1.0.1",
     "@demandcluster/api-plugin-shipments-flat-rate": "^1.1.0",
