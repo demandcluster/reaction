@@ -29,7 +29,7 @@
     "@demandcluster/api-plugin-orders-merchant": "^1.2.0",
     "@demandcluster/api-plugin-payments-buckaroo": "^1.1.0",
     "@demandcluster/api-plugin-shipments-flat-rate": "^1.1.0",
-    "@demandcluster/api-plugin-strapi": "^1.2.1",
+    "@demandcluster/api-plugin-strapi": "^1.2.2",
     "@demandcluster/api-plugin-wishlists": "^1.3.1",
     "@demandcluster/demandcluster-rules": "^0.5.15",
     "@demandcluster/reaction-channel-manager": "^8.1.0-dev.16",
