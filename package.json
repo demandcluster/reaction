@@ -27,7 +27,7 @@
     "@demandcluster/api-plugin-catalogs": "^1.1.2-dc-0",
     "@demandcluster/api-plugin-channelengine": "file:.yalc/@demandcluster/api-plugin-channelengine",
     "@demandcluster/api-plugin-files": "~1.1.0",
-    "@demandcluster/api-plugin-merchants": "^1.0.1",
+    "@demandcluster/api-plugin-merchants": "^1.1.0",
     "@demandcluster/api-plugin-orders": "^1.5.3",
     "@demandcluster/api-plugin-orders-merchant": "^1.2.0",
     "@demandcluster/api-plugin-payments-buckaroo": "^1.1.0",
