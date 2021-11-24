@@ -43,5 +43,6 @@
   "buckarooPayments": "@demandcluster/api-plugin-payments-buckaroo",
   "wishlists": "@demandcluster/api-plugin-wishlists",
   "merchants": "@demandcluster/api-plugin-merchants",
+  "apikeys": "@demandcluster/api-plugin-apikeys",
   "channelengine": "@demandcluster/api-plugin-channelengine"
 }
