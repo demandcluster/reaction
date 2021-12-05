@@ -26,7 +26,6 @@
     "@demandcluster/api-plugin-apikeys": "0.0.7",
     "@demandcluster/api-plugin-cart-extend": "^1.0.0",
     "@demandcluster/api-plugin-catalogs": "^1.1.2-dc-0",
-    "@demandcluster/api-plugin-channelengine": "file:.yalc/@demandcluster/api-plugin-channelengine",
     "@demandcluster/api-plugin-files": "~1.1.0",
     "@demandcluster/api-plugin-merchants": "^1.4.0",
     "@demandcluster/api-plugin-orders": "^1.5.3",
