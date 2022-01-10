@@ -12,7 +12,7 @@ stages:
       KUBECTL_ACTION: replace
       NPM_CONFIG_CACHE: /home/jenkins/.npm
       NPM_USER: demandcluster
-      PLUGIN_BUILD_ARGS: NPM_ARG=$NPM_TOKEN,NPM_P=$NPM_PASS
+      PLUGIN_BUILD_ARGS: NPM_ARG=$NPM_TOKEN
     envFrom:
     - sourceName: cicd
       sourceKey: NPM_TOKEN
