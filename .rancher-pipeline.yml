@@ -1,22 +1,5 @@
 stages:
-- name: Install
-  steps:
-  - runScriptConfig:
-      image: node:14.15.0-alpine
-      shellScript: npm install -g npm-cli-login && su node && npm set registry https://npm.demandcluster.com && npm-cli-login --quotes && npm install -g npm@latest &&  npm install --unsafe-perm
-    env:
-      HOME: /home/jenkins
-      NPM_CONFIG_CACHE: /home/jenkins/.npm
-      NPM_EMAIL: devops@demandcluster.com
-      NPM_REGISTRY: https://npm.demandcluster.com
-      NPM_USER: demandcluster
-    envFrom:
-    - sourceName: cicd
-      sourceKey: NPM_TOKEN
-      targetKey: NPM_TOKEN
-    - sourceName: cicd
-      sourceKey: NPM_PASS
-      targetKey: NPM_PASS
+
 - name: Publish
   steps:
   - publishImageConfig:
