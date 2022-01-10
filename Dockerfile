@@ -28,10 +28,11 @@ RUN npm i -g npm@latest
 # But the others are on their own line so that the build
 # will fail if they are not present in the project.
 
-COPY --chown=node:node package.json ./
-COPY --chown=node:node package-lock.json LICENSE* ./
+COPY --chown=node:node package.json ./package.json
+COPY --chown=node:node package-lock.json  ./package-lock.json
 COPY --chown=node:node ./src ./src
 COPY --chown=node:node ./.npmrc ./.npmrc
+COPY --chown=node:node ./node_modules ./node_modules
 RUN chown node:node /usr/local/src/app -R
 USER node
 
@@ -40,16 +41,15 @@ ENV NPM_EMAIL="devops@demandcluster.com"
 ENV NPM_REGISTRY="https://npm.demandcluster.com"
 
 ARG NPM_ARG
-ENV NPM_TOKEN=$NPM_ARG
+ENV NPM_TOKEN = $NPM_ARG
 
 RUN npm set registry https://npm.demandcluster.com
 
 
 # RUN source ./npm_token
 # Install dependencies
-RUN npm i --only=prod --no-scripts
-# delete npm token
-RUN rm -f .npmrc || :
+RUN npm i --only=prod --no-scripts --non-interactive
+
 #RUN rm -f npm_token || :
 
 RUN cd node_modules/sharp && (node install/libvips && node install/dll-copy && prebuild-install) || (node-gyp rebuild && node install/dll-copy)
