@@ -1,5 +1,4 @@
 stages:
-
 - name: Publish
   steps:
   - publishImageConfig:
@@ -17,6 +16,7 @@ stages:
     envFrom:
     - sourceName: cicd
       sourceKey: NPM_TOKEN
+      targetKey: NPM_TOKEN
 - name: Deploy Staging Server
   steps:
   - applyYamlConfig:
