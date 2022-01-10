@@ -2,7 +2,7 @@ stages:
 - name: Install
   steps:
   - runScriptConfig:
-      image: node:12-alpine
+      image: node:14.15.0-alpine
       shellScript: npm install -g npm-cli-login && npm set registry https://npm.demandcluster.com && npm-cli-login --quotes && npm install -g npm@latest && npm install
     env:
       HOME: /home/jenkins
