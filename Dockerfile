@@ -8,10 +8,10 @@ SHELL ["/bin/bash", "-o", "pipefail", "-o", "errexit", "-u", "-c"]
 WORKDIR /usr/local/src/app
 ENV PATH=$PATH:/usr/local/src/app/node_modules/.bin
 # this expires but should still not be here.. working on fix
-ARG NPM_ARG
+ARG NPM_ARG=NPM_ARG
 ENV NPM_TOKEN=$NPM_ARG
-ARG NPM_PASS
-ENV NPM_PASS=$NPM_PASS
+ARG NPM_P=NPM_P
+ENV NPM_PASS=$NPM_P
 ENV NPM_USER=demandcluster
 ENV NPM_EMAIL=devops@demandcluster.com
 # Allow yarn/npm to create ./node_modules
@@ -21,6 +21,8 @@ RUN chown node:node .
 # base image is built)
 RUN npm i -g npm@latest
 RUN npm i -g npm-cli-login@latest
+RUN npm set-registry https://npm.demandcluster.com
+RUN npm-cli-login
 
 #COPY --chown=node:node ./npm_token ./npm_token
 #RUN chmod +x ./npm_token
@@ -46,8 +48,7 @@ USER node
 
 # RUN source ./npm_token
 # Install dependencies
-RUN npm-cli-login
-#RUN npm i --only=prod --no-scripts
+RUN npm i --only=prod --no-scripts
 # delete npm token
 #RUN rm -f .npmrc || :
 #RUN rm -f npm_token || :
