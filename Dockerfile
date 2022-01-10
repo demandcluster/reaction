@@ -13,7 +13,7 @@ ENV NPM_TOKEN=$NPM_ARG
 ARG NPM_PASS
 ENV NPM_PASS=$NPM_PASS
 ENV NPM_USER=demandcluster
-
+ENV NPM_EMAIL=devops@demandcluster.com
 # Allow yarn/npm to create ./node_modules
 RUN chown node:node .
 
