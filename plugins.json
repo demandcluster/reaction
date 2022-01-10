@@ -42,5 +42,6 @@
   "cartExtend": "@demandcluster/api-plugin-cart-extend",
   "buckarooPayments": "@demandcluster/api-plugin-payments-buckaroo",
   "wishlists": "@demandcluster/api-plugin-wishlists",
-  "merchants": "@demandcluster/api-plugin-merchants"
+  "apikeys": "@demandcluster/api-plugin-apikeys",
+  "shops-merchant": "@demandcluster/api-plugin-shops-merchant"
 }
