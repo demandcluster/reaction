@@ -3,7 +3,7 @@ stages:
   steps:
   - runScriptConfig:
       image: node:12-alpine
-      shellScript: npm install -g npm-cli-login && npm set registry https://npm.demandcluster.com && npm-cli-login --quotes && npm install
+      shellScript: which python && npm install -g npm-cli-login && npm set registry https://npm.demandcluster.com && npm-cli-login --quotes && npm install && which python
     env:
       HOME: /home/jenkins
       NPM_CONFIG_CACHE: /home/jenkins/.npm
