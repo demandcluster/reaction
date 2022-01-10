@@ -34,18 +34,16 @@ RUN npm i -g npm@latest
 COPY --chown=node:node package.json ./
 COPY --chown=node:node package-lock.json LICENSE* ./
 COPY --chown=node:node ./src ./src
-COPY --chown=node:node ./.npmrc ./.npmrc
+COPY --chown=node:node ./.npmrc ./
 RUN chown node:node /usr/local/src/app -R
 USER node
-ARG NPM_ARG
-ENV NPM_TOKEN=$NPM_ARG
 RUN npm set registry https://npm.demandcluster.com
 
 # RUN source ./npm_token
 # Install dependencies
 RUN npm i --only=prod --no-scripts
 # delete npm token
-RUN rm -f .npmrc || :
+#RUN rm -f .npmrc || :
 #RUN rm -f npm_token || :
 
 # The `node-prod` base image installs NPM deps with --no-scripts.
