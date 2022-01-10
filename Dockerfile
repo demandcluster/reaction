@@ -32,7 +32,7 @@ COPY --chown=node:node package.json ./package.json
 COPY --chown=node:node package-lock.json  ./package-lock.json
 COPY --chown=node:node ./src ./src
 COPY --chown=node:node ./.npmrc ./.npmrc
-COPY --chown=node:node ./node_modules ./node_modules
+
 RUN chown node:node /usr/local/src/app -R
 USER node
 
