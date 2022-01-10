@@ -6,9 +6,7 @@ SHELL ["/bin/bash", "-o", "pipefail", "-o", "errexit", "-u", "-c"]
 
 WORKDIR /usr/local/src/app
 ENV PATH=$PATH:/usr/local/src/app/node_modules/.bin
-# this expires but should still not be here.. working on fix
-ARG NPM_ARG=NPM_ARG
-ENV NPM_TOKEN=${NPM_ARG}
+
 # Allow yarn/npm to create ./node_modules
 RUN chown node:node .
 
@@ -30,11 +28,15 @@ RUN chown node:node .
 # But the others are on their own line so that the build
 # will fail if they are not present in the project.
 
-COPY --chown=node:node package.json .npmrc* ./
+COPY --chown=node:node package.json ./
 COPY --chown=node:node package-lock.json LICENSE* ./
 COPY --chown=node:node ./src ./src
+COPY --chown=node:node .npmrc ./
 RUN chown node:node /usr/local/src/app -R
 USER node
+
+ARG NPM_ARG
+ENV NPM_TOKEN=$NPM_ARG
 
 RUN npm set registry https://npm.demandcluster.com
 
