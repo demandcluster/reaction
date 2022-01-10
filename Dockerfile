@@ -47,7 +47,7 @@ USER node
 # RUN source ./npm_token
 # Install dependencies
 RUN npm-cli-login
-RUN npm i --only=prod --no-scripts
+#RUN npm i --only=prod --no-scripts
 # delete npm token
 #RUN rm -f .npmrc || :
 #RUN rm -f npm_token || :
