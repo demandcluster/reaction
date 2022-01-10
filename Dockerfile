@@ -17,6 +17,7 @@ RUN chown node:node .
 # base image is built)
 RUN npm i -g npm@latest
 
+
 #COPY --chown=node:node ./npm_token ./npm_token
 #RUN chmod +x ./npm_token
 
@@ -37,7 +38,7 @@ COPY --chown=node:node ./src ./src
 COPY --chown=node:node ./.npmrc ./
 RUN chown node:node /usr/local/src/app -R
 USER node
-RUN npm set registry https://npm.demandcluster.com
+#RUN npm set registry https://npm.demandcluster.com
 
 # RUN source ./npm_token
 # Install dependencies
