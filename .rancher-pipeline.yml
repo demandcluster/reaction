@@ -1,5 +1,4 @@
 stages:
-
 - name: Publish
   steps:
   - publishImageConfig:
@@ -14,6 +13,7 @@ stages:
       NPM_CONFIG_CACHE: /home/jenkins/.npm
       NPM_USER: demandcluster
       PLUGIN_BUILD_ARGS: NPM_ARG=$NPM_TOKEN
+      NPM_EMAIL: "devops@demandcluster.com"
     envFrom:
     - sourceName: cicd
       sourceKey: NPM_TOKEN
