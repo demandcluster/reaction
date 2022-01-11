@@ -7,8 +7,8 @@ SHELL ["/bin/bash", "-o", "pipefail", "-o", "errexit", "-u", "-c"]
 WORKDIR /usr/local/src/app
 ENV PATH=$PATH:/usr/local/src/app/node_modules/.bin
 # this expires but should still not be here.. working on fix
-ARG NPM_TOKEN
-ENV NPM_TOKEN=$NPM_TOKEN
+ARG NPM_ARG
+ENV NPM_TOKEN=$NPM_ARG
 # Allow yarn/npm to create ./node_modules
 RUN chown node:node .
 
