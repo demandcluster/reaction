@@ -16,6 +16,9 @@ RUN chown node:node .
 # Install the latest version of NPM (as of when this
 # base image is built)
 RUN npm i -g npm@latest
+RUN npm i -g is-docker
+RUN npm i -g husky
+
 
 #COPY --chown=node:node ./npm_token ./npm_token
 #RUN chmod +x ./npm_token
