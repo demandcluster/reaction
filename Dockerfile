@@ -1,4 +1,4 @@
-FROM node:16.9.0
+FROM node:16.13-alpine
 
 # hadolint ignore=DL3018
 RUN apk --no-cache add bash curl less tini vim make python2 git g++ glib
