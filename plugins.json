@@ -20,7 +20,7 @@
   "pricingSimple": "@reactioncommerce/api-plugin-pricing-simple",
   "inventory": "@reactioncommerce/api-plugin-inventory",
   "inventorySimple": "@reactioncommerce/api-plugin-inventory-simple",
-  "carts": "@reactioncommerce/api-plugin-carts",
+  "carts": "@demandcluster/api-plugin-carts",
   "orders": "@demandcluster/api-plugin-orders",
   "ordersMerchant": "@demandcluster/api-plugin-orders-merchant",
   "payments": "@reactioncommerce/api-plugin-payments",
@@ -45,5 +45,6 @@
   "apikeys": "@demandcluster/api-plugin-apikeys",
   "shops-merchant": "@demandcluster/api-plugin-shops-merchant",
   "taxes-vat":  "@demandcluster/api-plugin-taxes-vat",
-  "shipments-merchant": "@demandcluster/api-plugin-shipments-merchant"
+  "shipments-merchant": "@demandcluster/api-plugin-shipments-merchant",
+  "id-generator": "@demandcluster/api-plugin-id-generator"
 }
