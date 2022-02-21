@@ -32,7 +32,6 @@
   "shipments": "@reactioncommerce/api-plugin-shipments",
   "shipmentsFlatRate": "@demandcluster/api-plugin-shipments-flat-rate",
   "taxes": "@reactioncommerce/api-plugin-taxes",
-  "taxesFlatRate": "@reactioncommerce/api-plugin-taxes-flat-rate",
   "navigation": "@reactioncommerce/api-plugin-navigation",
   "sitemapGenerator": "@reactioncommerce/api-plugin-sitemap-generator",
   "notifications": "@reactioncommerce/api-plugin-notifications",
@@ -45,6 +44,5 @@
   "apikeys": "@demandcluster/api-plugin-apikeys",
   "shops-merchant": "@demandcluster/api-plugin-shops-merchant",
   "taxes-vat":  "@demandcluster/api-plugin-taxes-vat",
-  "shipments-merchant": "@demandcluster/api-plugin-shipments-merchant",
-  "id-generator": "@demandcluster/api-plugin-id-generator"
+  "shipments-merchant": "@demandcluster/api-plugin-shipments-merchant"
 }
