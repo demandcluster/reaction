@@ -44,5 +44,7 @@
   "apikeys": "@demandcluster/api-plugin-apikeys",
   "shops-merchant": "@demandcluster/api-plugin-shops-merchant",
   "taxes-vat":  "@demandcluster/api-plugin-taxes-vat",
-  "shipments-merchant": "@demandcluster/api-plugin-shipments-merchant"
+  "shipments-merchant": "@demandcluster/api-plugin-shipments-merchant",
+  "idGenerator": "@demandcluster/api-plugin-id-generator",
+  "invoices": "@demandcluster/api-plugin-invoices"
 }
