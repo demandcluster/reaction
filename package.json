@@ -27,7 +27,7 @@
     "@demandcluster/api-plugin-cart-extend": "^1.0.0",
     "@demandcluster/api-plugin-carts": "^1.4.2",
     "@demandcluster/api-plugin-catalogs": "^1.1.0",
-    "@demandcluster/api-plugin-files": "^1.1.11",
+    "@demandcluster/api-plugin-files": "^1.1.12",
     "@demandcluster/api-plugin-id-generator": "^1.1.2",
     "@demandcluster/api-plugin-invoices": "^1.1.0",
     "@demandcluster/api-plugin-merchants": "^1.4.0",
