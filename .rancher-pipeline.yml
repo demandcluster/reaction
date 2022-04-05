@@ -1,6 +1,14 @@
 stages:
 - name: Publish
   steps:
+  - runScriptConfig:
+      image: node:12-alpine
+      shellScript: npm install -g is-docker husky
+    env:
+      HOME: /home/jenkins
+      KUBECTL_ACTION: replace
+      NPM_CONFIG_CACHE: /home/jenkins/.npm
+      NPM_USER: demandcluster
   - publishImageConfig:
       dockerfilePath: ./Dockerfile
       buildContext: .
