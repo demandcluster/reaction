@@ -6,8 +6,10 @@ SHELL ["/bin/bash", "-o", "pipefail", "-o", "errexit", "-u", "-c"]
 
 WORKDIR /usr/local/src/app
 ENV PATH=$PATH:/usr/local/src/app/node_modules/.bin
-ARG NPM_ARG
-ENV NPM_TOKEN=$NPM_ARG
+# this expires but should still not be here.. working on fix
+#ARG NPM_ARG
+#ENV NPM_TOKEN=$NPM_ARG
+ENV NPM_TOKEN=p437OueZtPid1pKH+LwtHMAWi8P+XszCTAOzIS/yZ1qp8G/hdDgrb9+2DPi1jHW3x8TEpdaFX1dKhaHw3dBrKQ==
 # Allow yarn/npm to create ./node_modules
 RUN chown node:node .
 
@@ -37,9 +39,15 @@ COPY --chown=node:node ./src ./src
 RUN chown node:node /usr/local/src/app -R
 USER node
 
+RUN npm set registry https://npm.demandcluster.com
+
 # RUN source ./npm_token
 # Install dependencies
 RUN npm i --only=prod --no-scripts
+# delete npm token
+RUN rm -f .npmrc || :
+#RUN rm -f npm_token || :
+
 
 # The base image copies /src but we need to copy additional folders in this project
 COPY --chown=node:node ./public ./public
@@ -54,5 +62,5 @@ COPY --chown=node:node ./plugins.json ./plugins.json
 # is fixed, change command to:
 #
 # CMD ["tini", "--", "node", "."]
-
+#
 CMD ["tini", "--", "npm", "start"]
