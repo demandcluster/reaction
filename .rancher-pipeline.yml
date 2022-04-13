@@ -1,6 +1,14 @@
 stages:
 - name: Publish
   steps:
+  - runScriptConfig:
+      image: node:12-alpine
+      shellScript: npm install -g is-docker husky
+    env:
+      HOME: /home/jenkins
+      KUBECTL_ACTION: replace
+      NPM_CONFIG_CACHE: /home/jenkins/.npm
+      NPM_USER: demandcluster
   - publishImageConfig:
       dockerfilePath: ./Dockerfile
       buildContext: .
@@ -9,9 +17,9 @@ stages:
       registry: harbor.demandcluster.com
     env:
       HOME: /home/jenkins
+      KUBECTL_ACTION: replace
       NPM_CONFIG_CACHE: /home/jenkins/.npm
       NPM_USER: demandcluster
-      KUBECTL_ACTION: replace
     envFrom:
     - sourceName: cicd
       sourceKey: NPM_TOKEN
@@ -20,4 +28,7 @@ stages:
   - applyYamlConfig:
       path: ./deployment.yaml
 timeout: 60
+branch:
+  include:
+  - staging
 notification: {}
