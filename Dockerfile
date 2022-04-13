@@ -6,15 +6,14 @@ SHELL ["/bin/bash", "-o", "pipefail", "-o", "errexit", "-u", "-c"]
 
 WORKDIR /usr/local/src/app
 ENV PATH=$PATH:/usr/local/src/app/node_modules/.bin
-ENV NPM_TOKEN=${NPM_TOKEN}
+
+ARG NPM_TOKEN
+ENV NPM_TOKEN=$NPM_TOKEN
 # Allow yarn/npm to create ./node_modules
 RUN chown node:node .
 
-# Install the latest version of NPM (as of when this
-# base image is built)
 RUN npm i -g is-docker
 RUN npm i -g husky
-
 
 #COPY --chown=node:node ./npm_token ./npm_token
 #RUN chmod +x ./npm_token
@@ -30,15 +29,15 @@ RUN npm i -g husky
 # But the others are on their own line so that the build
 # will fail if they are not present in the project.
 
-COPY --chown=node:node package.json .npmrc* ./
+COPY --chown=node:node package.json .npmrc ./
 COPY --chown=node:node package-lock.json LICENSE* ./
-COPY --chown=node:node ./src ./src
+
 RUN chown node:node /usr/local/src/app -R
 USER node
-
-# RUN source ./npm_token
 # Install dependencies
 RUN npm i --only=prod --no-scripts
+
+COPY --chown=node:node ./src ./src
 
 # The base image copies /src but we need to copy additional folders in this project
 COPY --chown=node:node ./public ./public
@@ -53,5 +52,5 @@ COPY --chown=node:node ./plugins.json ./plugins.json
 # is fixed, change command to:
 #
 # CMD ["tini", "--", "node", "."]
-
+#
 CMD ["tini", "--", "npm", "start"]
