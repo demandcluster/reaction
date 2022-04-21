@@ -7,6 +7,7 @@ SHELL ["/bin/bash", "-o", "pipefail", "-o", "errexit", "-u", "-c"]
 WORKDIR /usr/local/src/app
 ENV PATH=$PATH:/usr/local/src/app/node_modules/.bin
 ENV NPM_TOKEN=${NPM_TOKEN}
+
 # Allow yarn/npm to create ./node_modules
 RUN chown node:node .
 
@@ -35,7 +36,7 @@ COPY --chown=node:node package-lock.json LICENSE* ./
 COPY --chown=node:node ./src ./src
 RUN chown node:node /usr/local/src/app -R
 USER node
-
+RUN npm set registry https://npm.demandcluster.com
 # RUN source ./npm_token
 # Install dependencies
 RUN npm i --only=prod --no-scripts
