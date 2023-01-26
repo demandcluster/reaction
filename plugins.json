@@ -45,6 +45,7 @@
   "shops-merchant": "@demandcluster/api-plugin-shops-merchant",
   "taxes-vat":  "@demandcluster/api-plugin-taxes-vat",
   "shipments-merchant": "@demandcluster/api-plugin-shipments-merchant",
+  "shipping-labels": "@demandcluster/api-plugin-shipping",
   "idGenerator": "@demandcluster/api-plugin-id-generator",
   "invoices": "@demandcluster/api-plugin-invoices",
   "typesense": "@demandcluster/api-plugin-typesense-search",
