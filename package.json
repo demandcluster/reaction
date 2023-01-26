@@ -146,7 +146,7 @@
     "lint": "eslint .",
     "lint:gql": "graphql-schema-linter ./src/**/*.graphql",
     "version": "echo $npm_package_version",
-    "_postinstall": "is-ci || is-docker || husky install",
+    "postinstall": "is-ci || is-docker || husky install",
     "prepublishOnly": "pinst --disable",
     "postpublish": "pinst --enable"
   },
